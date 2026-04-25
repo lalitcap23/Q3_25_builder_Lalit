@@ -102,7 +102,6 @@ pub struct Close<'info> {
     /// CHECK: Vault account manually validated by seeds + bump, only holds lamports
     #[account(mut, seeds = [b"vault_account", authority.key().as_ref()], bump)]
     pub vault_account: AccountInfo<'info>,
-
     #[account(mut)]
     pub authority: Signer<'info>,
 }
